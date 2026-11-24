@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Få nyheter på mejl – Långbacka Samfällighet (prototyp)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+</head>
+<body data-page="prenumerera">
+<main id="main"><div class="wrap stack">
+  <div class="page-title">
+    <h1>Få nyheter på mejl</h1>
+    <p>Vi mejlar när något händer i området. Du väljer själv vad du vill få, och du kan ändra dig eller avsluta när som helst.</p>
+  </div>
+
+  <form class="form" id="sub-form" novalidate>
+    <div class="field">
+      <label for="email">Din e-postadress</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="namn@exempel.se">
+      <span class="err" id="email-err" aria-live="polite"></span>
+    </div>
+    <fieldset>
+      <legend>Vad vill du få?</legend>
+      <label class="check"><input type="checkbox" name="val" id="val-viktigt" data-label="Viktiga meddelanden direkt" checked><span><b>Viktiga meddelanden direkt</b><small>Vatten, värme, avstängningar och akuta fel. Skickas så fort de publiceras.</small></span></label>
+      <label class="check"><input type="checkbox" name="val" id="val-vecka" data-label="Veckans nyheter" checked><span><b>Veckans nyheter</b><small>En sammanfattning på söndagar, bara när det finns något nytt.</small></span></label>
+      <label class="check"><input type="checkbox" name="val" id="val-fel" data-label="Felanmälningar i området"><span><b>Felanmälningar i området</b><small>När något har felanmälts och när det är åtgärdat.</small></span></label>
+    </fieldset>
+    <button class="btn" type="submit" style="justify-self:start">Prenumerera</button>
+    <p class="fine">Du får ett mejl där du bekräftar din anmälan. Adressen används bara för samfällighetens information och lämnas inte ut. Varje mejl har en länk för att ändra val eller avsluta.</p>
+  </form>
+
+  <div class="done" id="sub-done" tabindex="-1" hidden></div>
+</div></main>
+</body>
+</html>
